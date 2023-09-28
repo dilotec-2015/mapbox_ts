@@ -1,0 +1,18 @@
+
+1. terminal: eas login
+// first time
+2. terminal: npx eas build:configure
+3. terminal: npx eas build --platform android --profile development
+--------------------------
+4. device: scan the QR code on the expo build
+5. device: download and install distribution build
+6. device: start the app
+6. terminal: npx expo start --dev-client
+7. device: scan the QR code on the terminal
+8. copy the url from qr code scanner
+9. paste the url to the app and connect
+10. terminal: npx react-native log-android  // for console
+
+
+npx expo start --dev-client
+npx react-native log-android

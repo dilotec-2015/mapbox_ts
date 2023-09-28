@@ -1,11 +1,26 @@
 {
   "expo": {
-    "name": "mapbox_ts",
-    "slug": "mapbox_ts",
+    "name": "mapbox_app",
+    "slug": "mapbox_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoiZGlsb3RlYy0yMDE1IiwiYSI6ImNsbG5mNXJseDAwNmwzZm8wOTYwazM4b2kifQ.6NhetZHfEGXXiTyn-oylNg"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Show current location on map."
+        }
+      ]
+    ],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -21,10 +36,21 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dilotec2015.mapbox_app",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6d4cd50d-c472-4a6d-941d-0bdddc3e3872"
+      }
     }
   }
 }
